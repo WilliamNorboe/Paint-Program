@@ -25,7 +25,7 @@ function createGrid(numSquares){
 }
 
 function squareHover(square){
-    square.classList.add("hover");
+    square.style.backgroundColor = generateColor();
 }
 
 function removeAllChildNodes(parent){
@@ -34,6 +34,16 @@ function removeAllChildNodes(parent){
     }
 }
 
+function generateColor(){
+    let hexCodes = "0123456789ABCDEF";
+    let randomHexNumber;
+    let color = "#";
+    for(let i = 0; i < 6; ++i){
+        randomHexNumber = Math.floor(Math.random() * 10);
+        color = color + hexCodes[randomHexNumber];
+    }
+    return color;
+}
 function changeGrid(){
     let numSquares = prompt("Enter Number of Square on Each Row: ");
     if(numSquares > 100 || numSquares < 1){
