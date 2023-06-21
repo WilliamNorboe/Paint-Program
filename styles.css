@@ -1,5 +1,6 @@
 body{
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -12,6 +13,13 @@ body{
     align-items: center;
 }
 
+.pageButton{
+    align-self: center;
+    margin-bottom: 30px;
+    font-size: 15px;
+    /* background-color: lightgrey; */
+    border-radius: 10px;
+}
 .row{
     display: flex;
 }
