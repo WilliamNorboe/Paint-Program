@@ -39,7 +39,7 @@ function generateColor(){
     let randomHexNumber;
     let color = "#";
     for(let i = 0; i < 6; ++i){
-        randomHexNumber = Math.floor(Math.random() * 10);
+        randomHexNumber = Math.floor(Math.random() * 16);
         color = color + hexCodes[randomHexNumber];
     }
     return color;
