@@ -9,12 +9,15 @@ createGrid(16);
 
 function createGrid(numSquares){
     let squareID = 1;
+    let size = (680/numSquares) + "px";
     for(let i = 0; i < numSquares; ++i){
         const row = document.createElement('div');
         row.classList.add('row');
         for(let j = 0; j < numSquares; ++ j){
             const square = document.createElement('div');
             square.classList.add("square");
+            square.style.height = size;
+            square.style.width = size;
             square.id = "square" + squareID;
             squareID++;
             square.addEventListener("mouseover", () => {squareHover(square);});
