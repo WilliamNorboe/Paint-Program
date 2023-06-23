@@ -9,7 +9,7 @@ createGrid(16);
 
 function createGrid(numSquares){
     let squareID = 1;
-    let size = (680/numSquares) + "px";
+    let size = (document.querySelector('body').clientWidth/numSquares) + "px";
     for(let i = 0; i < numSquares; ++i){
         const row = document.createElement('div');
         row.classList.add('row');
