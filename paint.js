@@ -5,9 +5,15 @@ let changeGridButton = document.querySelector("#changeGrid");
 changeGridButton.addEventListener("click", changeGrid);
 
 
-createGrid(16);
+
+
 let selctedColor = "red";
 let allColors = ["red", "yellow", "blue", "green", "purple", "orange", "white"];
+
+let randomBtn = document.getElementById("random");
+randomBtn.addEventListener("click", randomClicked);
+
+createGrid(16);
 createColors(allColors);
 
 function colorClicked(square, newColor){
@@ -83,4 +89,10 @@ function changeGrid(){
     }
     removeAllChildNodes(grid);
     createGrid(numSquares);
+}
+
+function randomClicked(){
+    selctedColor = generateColor();
+    removeAllChildNodes(document.getElementById("colors"));
+    createColors(allColors);
 }
