@@ -1,1 +1,1 @@
-# Etch-N-Sketch
+# Paint

@@ -6,9 +6,15 @@ changeGridButton.addEventListener("click", changeGrid);
 
 
 createGrid(16);
-createColors(["red", "yellow", "blue", "green", "purple", "orange", "white"]);
+let selctedColor = "red";
+let allColors = ["red", "yellow", "blue", "green", "purple", "orange", "white"];
+createColors(allColors);
 
-
+function colorClicked(square, newColor){
+    selctedColor = newColor;
+    removeAllChildNodes(document.getElementById("colors"));
+    createColors(allColors);
+}
 function createColors(colors){
     let colorsDIV = document.getElementById("colors");
     squareID = 1;
@@ -18,9 +24,12 @@ function createColors(colors){
         square.style.height = "25px";
         square.style.width = "25px";
         square.id = "color" + squareID;
+        if(colors[j] == selctedColor){
+            square.style.border = "5px solid black"
+        }
         square.style.backgroundColor = colors[j];
         squareID++;
-        // square.addEventListener("mouseover", () => {squareHover(square);});
+        square.addEventListener("click", () => {colorClicked(square, colors[j]);});
         colorsDIV.appendChild(square);
     }
 }
