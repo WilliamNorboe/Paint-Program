@@ -6,6 +6,24 @@ changeGridButton.addEventListener("click", changeGrid);
 
 
 createGrid(16);
+createColors(["red", "yellow", "blue", "green", "purple", "orange", "white"]);
+
+
+function createColors(colors){
+    let colorsDIV = document.getElementById("colors");
+    squareID = 1;
+    for(let j = 0; j < colors.length; ++ j){
+        const square = document.createElement('div');
+        square.classList.add("square");
+        square.style.height = "25px";
+        square.style.width = "25px";
+        square.id = "color" + squareID;
+        square.style.backgroundColor = colors[j];
+        squareID++;
+        // square.addEventListener("mouseover", () => {squareHover(square);});
+        colorsDIV.appendChild(square);
+    }
+}
 
 function createGrid(numSquares){
     let squareID = 1;

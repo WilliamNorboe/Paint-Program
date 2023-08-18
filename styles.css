@@ -52,3 +52,9 @@ body{
 .hover{
     background-color: grey;
 }
+
+#colors{
+    display: flex;
+    gap: 5px;
+    padding-bottom: 10px;
+}
