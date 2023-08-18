@@ -47,7 +47,8 @@ function createGrid(numSquares){
             square.style.width = size;
             square.id = "square" + squareID;
             squareID++;
-            square.addEventListener("mouseover", () => {squareHover(square);});
+            // square.addEventListener("mouseover", () => {squareHover(square);});
+            square.addEventListener("click", () => {squareHover(square);});
             row.appendChild(square);
         }
     grid.appendChild(row);
@@ -55,7 +56,7 @@ function createGrid(numSquares){
 }
 
 function squareHover(square){
-    square.style.backgroundColor = generateColor();
+    square.style.backgroundColor = selctedColor
 }
 
 function removeAllChildNodes(parent){
