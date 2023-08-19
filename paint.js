@@ -6,7 +6,7 @@ changeGridButton.addEventListener("click", changeGrid);
 
 
 let selctedColor = "red";
-let allColors = ["red", "yellow", "blue", "green", "purple", "orange", "tan", "white"];
+let allColors = ["red", "yellow", "blue", "green", "purple", "orange", "tan", "brown", "black", "white"];
 
 let randomBtn = document.getElementById("random");
 randomBtn.addEventListener("click", randomClicked);
